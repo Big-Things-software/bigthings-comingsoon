@@ -63,9 +63,39 @@
 </script>
 
 </head>
-<body class="bg-black text-paper font-sans h-screen overflow-hidden flex items-center justify-center relative">
+<body class="bg-black text-white font-sans h-screen overflow-hidden flex items-center justify-center relative">
 
   <div class="fixed -inset-[10%] z-0 bg-black bg-[radial-gradient(circle_at_20%_30%,rgba(47,137,197,0.22),transparent_55%),radial-gradient(circle_at_80%_70%,rgba(111,195,232,0.16),transparent_55%),radial-gradient(circle_at_50%_100%,rgba(30,78,122,0.18),transparent_60%)] animate-drift motion-reduce:animate-none"></div>
+
+  <div id="particles-js" class="fixed inset-0 z-[2]"></div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  if (window.particlesJS) {
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 70, density: { enable: true, value_area: 900 } },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.35, random: true, anim: { enable: true, speed: 0.4, opacity_min: 0.05, sync: false } },
+        size: { value: 2, random: true },
+        line_linked: { enable: true, distance: 140, color: '#ffffff', opacity: 0.08, width: 1 },
+        move: { enable: true, speed: 0.6, direction: 'none', random: true, straight: false, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'window',
+        events: {
+          onhover: { enable: true, mode: 'grab' },
+          onclick: { enable: false },
+          resize: true
+        },
+        modes: { grab: { distance: 160, line_linked: { opacity: 0.2 } } }
+      },
+      retina_detect: true
+    });
+  }
+</script>
 
 </body>
 </html>
